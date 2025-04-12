@@ -1,5 +1,5 @@
 body {
-  color: #b3acf1;
+  background-color: #b3acf1;
   text-align: center;
 }
 h1 {
@@ -9,8 +9,5 @@ h2 {
   color: white;
 }
 h3 {
-  color: white;
-}
-a {
   color: white;
 }
