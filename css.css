@@ -3,14 +3,18 @@ body {
   text-align: center;
 }
 h1 {
+  font-family: "Monaco", monospace;
   color: white;
 }
 h2 {
+  font-family: "Monaco", monospace;
   color: white;
 }
 h3 {
+  font-family: "Monaco", monospace;
   color: white;
 }
 a {
+  font-family: "Lucida Console", "Courier New", monospace;
   color: #007bff
 }
