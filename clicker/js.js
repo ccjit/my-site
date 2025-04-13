@@ -1,8 +1,9 @@
 if (localStorage.clicks == undefined) {
     localStorage.setItem('clicks', 0)
 }
-if (localStorage.clickers == undefined) {
+if (localStorage.clickers == undefined || localStorage.clickers == "0") {
     let price = 10
+    localStorage.setItem('clickers', 0)
 }
 document.getElementById("timesClicked").innerHTML = localStorage.clicks;
 function addCount() {
