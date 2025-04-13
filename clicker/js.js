@@ -5,14 +5,13 @@ if (localStorage.clickers == undefined || localStorage.clickers == "0") {
     localStorage.setItem('clickerPrice', 10)
     localStorage.setItem('clickers', 0)
 }
-let price = localStorage.clickerPrice
-document.getElementById("timesClicked").innerHTML = localStorage.clicks;
 function addCount() {
     localStorage.setItem('clicks', parseInt(localStorage.clicks) + 1);
     document.getElementById("timesClicked").innerHTML = localStorage.clicks;
     document.getElementById("clickerAmount").innerHTML = localStorage.clickers;
 }
 function buyClicker() {
+    let price = localStorage.clickerPrice
     if (localStorage.clickers == undefined) {
         localStorage.setItem('clickers', 0)
     }
