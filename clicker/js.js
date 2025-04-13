@@ -23,7 +23,7 @@ function buyClicker() {
         localStorage.setItem('clicks', parseInt(localStorage.clicks) - parseInt(localStorage.clickerPrice))
         document.getElementById("timesClicked").innerHTML = localStorage.clicks;
         localStorage.setItem('clickerPrice', parseInt(localStorage.clickerPrice) + (parseInt(localStorage.clickerPrice) / 2))
-        document.getElementById("price").innerHTML = localStorage.clickerPrice;
+        document.getElementById("price").innerHTML = "Clicker price: " + localStorage.clickerPrice;
     }
 }
 if (parseInt(localStorage.clickers) > 0) {
