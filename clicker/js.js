@@ -4,15 +4,9 @@ if (localStorage.clicks == undefined) {
 if (localStorage.clickers == undefined) {
     let price = 10
 }
-let clicks = localStorage.clicks
 document.getElementById("timesClicked").innerHTML = localStorage.clicks;
 function addCount() {
-    if (clicks == localStorage.clicks) {
-        localStorage.setItem('clicks', parseInt(localStorage.clicks) + 1);
-    } else {
-        localStorage.setItem('clicks', 0);
-    }
-    let clicks = localStorage.clicks
+    localStorage.setItem('clicks', parseInt(localStorage.clicks) + 1);
     document.getElementById("timesClicked").innerHTML = localStorage.clicks;
     document.getElementById("clickerAmount").innerHTML = localStorage.clickers;
 }
