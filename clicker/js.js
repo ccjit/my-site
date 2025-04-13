@@ -14,14 +14,15 @@ function addCount() {
     }
     let clicks = localStorage.clicks
     document.getElementById("timesClicked").innerHTML = localStorage.clicks;
+    document.getElementById("clickerAmount").innerHTML = localStorage.clickers;
 }
 function buyClicker() {
     if (localStorage.clickers == undefined) {
         localStorage.setItem('clickers', 0)
     }
     if (parseInt(localStorage.clicks) < price) {
-        document.getElementById("timesClicked").innerHTML = "You don't have enough clicks to buy that.";
-        setTimeout(function(){document.getElementById("timesClicked").innerHTML = localStorage.clicks},5000)
+        document.getElementById("clickerAmount").innerHTML = "You don't have enough clicks to buy that.";
+        setTimeout(function(){document.getElementById("clickerAmount").innerHTML = localStorage.clickers},5000)
     } else {
         localStorage.setItem("clickers", parseInt(localStorage.clickers) + 1)
         localStorage.setItem('clicks', parseInt(localStorage.clicks) - price)
