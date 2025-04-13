@@ -9,6 +9,7 @@ function addCount() {
     localStorage.setItem('clicks', parseInt(localStorage.clicks) + 1);
     document.getElementById("timesClicked").innerHTML = localStorage.clicks;
     document.getElementById("clickers").innerHTML = localStorage.clickers;
+    document.getElementById("price").innerHTML = "Clicker price: " + localStorage.clickerPrice;
 }
 function buyClicker() {
     if (localStorage.clickers == undefined) {
