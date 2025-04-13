@@ -5,3 +5,7 @@ body {
 .p1 {
   color: white;
 }
+.big-btn {
+    height: 256px;
+    width: 256px;
+}
