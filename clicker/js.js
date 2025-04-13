@@ -2,9 +2,10 @@ if (localStorage.clicks == undefined) {
     localStorage.setItem('clicks', 0)
 }
 if (localStorage.clickers == undefined || localStorage.clickers == "0") {
-    let price = 10
+    localStorage.setItem('clickerPrice', 10)
     localStorage.setItem('clickers', 0)
 }
+let price = localStorage.clickerPrice
 document.getElementById("timesClicked").innerHTML = localStorage.clicks;
 function addCount() {
     localStorage.setItem('clicks', parseInt(localStorage.clicks) + 1);
@@ -24,6 +25,7 @@ function buyClicker() {
         document.getElementById("timesClicked").innerHTML = localStorage.clicks;
         document.getElementById("clickerAmount").innerHTML = localStorage.clickers;
         let price = price + (price / 2)
+        localStorage.setItem('clickerPrice', price)
     }
 }
 if (parseInt(localStorage.clickers) > 0) {
