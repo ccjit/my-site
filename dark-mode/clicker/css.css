@@ -1,0 +1,18 @@
+body {
+  background-color: #b3acf1;
+}
+.back-btn {
+   vertical-align: top;
+   text-align: left;
+}
+.middle-align {
+  text-align: center;
+  vertical-align: middle;
+}
+.p1 {
+  color: white;
+}
+.big-btn {
+    height: 256px;
+    width: 256px;
+}
