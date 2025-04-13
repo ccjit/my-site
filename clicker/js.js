@@ -31,7 +31,7 @@ if (parseInt(localStorage.clickers) > 0) {
     setInterval(function () {
         localStorage.setItem('clicks', parseInt(localStorage.clicks) + 1); 
         document.getElementById("timesClicked").innerHTML = localStorage.clicks;
-    }, 10000 / parseInt(localStorage.clickers))
+    }, 2000 / parseInt(localStorage.clickers))
 }
 let clickclick = {
     reset: function(noparam) { localStorage.setItem('clicks', 0); localStorage.setItem('clickers', 0); localStorage.setItem('clickerPrice', 10); document.getElementById("clickers").innerHTML = localStorage.clickers; document.getElementById("timesClicked").innerHTML = localStorage.clicks; },
