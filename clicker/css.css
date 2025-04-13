@@ -1,5 +1,6 @@
 body {
   background-color: #b3acf1;
+  text-align: center;
 }
 body {
   background-color: black;
@@ -9,13 +10,11 @@ body {
    text-align: left;
 }
 .p1 {
-  text-align: center;
   vertical-align: middle;
   color: white;
 }
 .big-btn {
   vertical-align: middle;
-  text-align: center;
   height: 256px;
   width: 256px;
 }
