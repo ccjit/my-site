@@ -12,6 +12,7 @@ function addCount() {
     document.getElementById("price").innerHTML = "Clicker price: " + localStorage.clickerPrice;
 }
 function clicker() {
+    let autoClick = setInterval(addCount(), 2000 / parseInt(localStorage.clickers))
     clearInterval(autoClick)
     let autoClick = setInterval(addCount(), 2000 / parseInt(localStorage.clickers))
 }
