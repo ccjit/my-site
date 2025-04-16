@@ -13,7 +13,7 @@ function addCount() {
 }
 function clicker() {
     clearInterval(autoClick)
-    let autoClick = setInterval(autoClick(), 2000 / parseInt(localStorage.clickers))
+    let autoClick = setInterval(addCount(), 2000 / parseInt(localStorage.clickers))
 }
 function buyClicker() {
     if (localStorage.clickers == undefined) {
