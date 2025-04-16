@@ -12,6 +12,7 @@ function addCount() {
     document.getElementById("price").innerHTML = "Clicker price: " + localStorage.clickerPrice;
 }
 function clicker() {
+    let autoClick
     clearInterval(autoClick)
     autoClick = setInterval(autoClick(), 2000 / parseInt(localStorage.clickers))
 }
@@ -32,9 +33,6 @@ function buyClicker() {
         clicker()
     }
 }
-if (parseInt(localStorage.clickers) > 0) {
-    autoClick = setInterval(autoClick(), 2000 / parseInt(localStorage.clickers))
-}    
 let clickclick = {
     reset: function(noparam) { localStorage.setItem('clicks', 0); localStorage.setItem('clickers', 0); localStorage.setItem('clickerPrice', 10); document.getElementById("clickers").innerHTML = localStorage.clickers; document.getElementById("timesClicked").innerHTML = localStorage.clicks; },
     price: console.log("Clicker Price: " + localStorage.clickerPrice)
