@@ -15,7 +15,16 @@ const arcs = [
   "#8000ff",
   "#ff00ff",
   "#ff0080"
-]
+].map((color, index) => {
+  const audio = new Audio(`https://raw.githubusercontent.com/ccjit/my-site/refs/heads/main/poly/note${index}`)
+  
+  audio.volume = 0.02;
+  
+  return {
+    color, 
+    audio
+  }
+});
 let startTime = new Date().getTime();
 
 const draw = () => {
@@ -76,12 +85,15 @@ const draw = () => {
   
     const length = end.x - start.x,
           initialArcRadius = length * 0.05;
-    
     // draw circle
     pen.fillStyle = 'white';
     pen.beginPath();
     pen.arc(x, y, length * 0.0065, 0, 2 * pi) ;
     pen.fill();
+
+    if (distance % pi <= 0.05) {
+      arc.audio.play();
+    }
   });
   requestAnimationFrame(draw);
 }
