@@ -6,3 +6,6 @@ function randomString(length, chars) {
 if (localStorage.token == undefined) {
     localStorage.setItem(randomString(24, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"))
 }
+function dark() {
+    location.replaceState(null, "", "https://ccjit.github.io/dark-mode")
+}
