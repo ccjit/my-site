@@ -7,5 +7,5 @@ if (localStorage.token == undefined) {
     localStorage.setItem(randomString(24, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"))
 }
 function light() {
-    location.replaceState(null, "", "https://ccjit.github.io/")
+    window.location.assign("https://ccjit.github.io/my-site")
 }
