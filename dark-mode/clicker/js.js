@@ -5,6 +5,7 @@ if (localStorage.clickers == undefined || localStorage.clickers == "0") {
     localStorage.setItem('clickerPrice', 10)
     localStorage.setItem('clickers', 0)
 }
+let autoClick
 function addCount() {
     localStorage.setItem('clicks', parseInt(localStorage.clicks) + 1);
     document.getElementById("timesClicked").innerHTML = localStorage.clicks;
@@ -13,7 +14,7 @@ function addCount() {
 }
 function clicker() {
     clearInterval(autoClick)
-    let autoClick = setInterval(addCount(), 2000 / parseInt(localStorage.clickers))
+    autoClick = setInterval(addCount(), 2000 / parseInt(localStorage.clickers))
 }
 function buyClicker() {
     if (localStorage.clickers == undefined) {
@@ -33,6 +34,7 @@ function buyClicker() {
     }
 }
 let clickclick = {
-    reset: function(noparam) { localStorage.setItem('clicks', 0); localStorage.setItem('clickers', 0); localStorage.setItem('clickerPrice', 10); document.getElementById("clickers").innerHTML = localStorage.clickers; document.getElementById("timesClicked").innerHTML = localStorage.clicks; },
+    reset: function(no, parameters) { localStorage.setItem('clicks', 0); localStorage.setItem('clickers', 0); localStorage.setItem('clickerPrice', 10); document.getElementById("clickers").innerHTML = localStorage.clickers; document.getElementById("timesClicked").innerHTML = localStorage.clicks; },
     price: console.log("Clicker Price: " + localStorage.clickerPrice)
 }
+clicker()
