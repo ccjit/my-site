@@ -63,6 +63,7 @@ function loadSave(key) {
             clickerPrice: clickerPrice
         }
         console.log("Loaded with success!")
+        window.location.reload(false)
     }
     catch (error) {
         throw "error when loading save data - " + error
