@@ -42,7 +42,40 @@ let clickclick = {
     hardreset: function(reloadPageType) { localStorage.removeItem('clicks'); localStorage.removeItem('clickers'); localStorage.removeItem('clickerPrice'); if (typeof reloadPageType === undefined) { if (reloadPageType === 0) { window.location.reload(true); } else if (reloadPageType === 1) { window.location.reload(false); } else if (reloadPageType !== 0 && reloadPagetype !== 1) { console.error("That is not a valid value. Please specify a valid value. 0 = refresh and load new page from server, 1 = refresh from cache") } } else { window.location.reload(true) } },
     price: console.log("Clicker Price: " + localStorage.clickerPrice)
 }
-
+function loadSave(key) {
+    try {
+        let decryptedKey = atob(key)
+        let values = decryptedKey.split('|')
+        let clicks = atob(values[0])
+        let clickers = atob(values[1])
+        let clickerPrice = atob(values[2])
+    }
+    catch (error) {
+        throw "error when decrypting save data - " + error
+    }
+    try {
+        localStorage.clicks = clicks
+        localStorage.clickers = clickers
+        localStorage.clickerPrice = clickerPrice
+        return {
+            clicks: clicks,
+            clickers: clickers,
+            clickerPrice: clickerPrice
+        }
+        console.log("Loaded with success!")
+    }
+    catch (error) {
+        throw "error when loading save data - " + error
+    }
+}
+function createSave() {
+    let clicks = btoa(localStorage.clicks)
+    let clickers = btoa(localStorage.clickers)
+    let clickerPrice = btoa(localStorage.clickerPrice)
+    let values = [clicks, clickers, clickerPrice]
+    let saveKey = btoa(values.join('|'))
+    return saveKey
+}
 setTimeout(()=>{
     if (localStorage.clickers !== 0) {
         clicker()
