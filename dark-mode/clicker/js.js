@@ -5,12 +5,21 @@ if (localStorage.clickers == undefined || localStorage.clickers == "0") {
     localStorage.setItem('clickerPrice', 10)
     localStorage.setItem('clickers', 0)
 }
+let audioFiles = [
+    "chord C maj.wav",
+    "chord C min.wav",
+    "chord E min.wav",
+    "chord F min.wav"
+]
 let autoClick
+let audio
 if (localStorage.clickers !== 0) {
      autoClick = setInterval(addCount(), 2000 / parseInt(localStorage.clickers))
 }
 let clicks = parseInt(localStorage.clicks)
 function addCount() {
+    audio = new Audio(audioFiles[Math.floor(Math.random()*audioFiles.length)]);
+    audio.play();
     localStorage.setItem('clicks', parseInt(localStorage.clicks) + 1);
     document.getElementById("timesClicked").innerHTML = localStorage.clicks;
     document.getElementById("clickers").innerHTML = localStorage.clickers;
