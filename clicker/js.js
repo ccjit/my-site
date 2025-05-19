@@ -6,7 +6,7 @@ if (localStorage.clickers == undefined || localStorage.clickers == "0") {
     localStorage.setItem('clickers', 0)
 }
 let audioFiles = [
-    "chord C maj alt.wav",
+    "chord C maj.wav",
     "chord C min.wav",
     "chord E min.wav",
     "chord F min.wav"
