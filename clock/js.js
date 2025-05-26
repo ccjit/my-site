@@ -56,6 +56,11 @@ function get24hourTime(timestamp) {
   }
 }
 function updateTime() {
+  let date = new Date()
+  let hours = date.getHours()
+  let minutes = date.getMinutes()
+  let seconds = date.getSeconds()
+  let ms = date.getMilliseconds()
   document.getElementById('time').text = get12hourTime()
   document.getElementById('24-hour-time').text = get24hourTime()
   document.getElementById('6-hour-time').text = get6hourTime()
