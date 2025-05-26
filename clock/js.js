@@ -14,7 +14,7 @@ const twelvehourtimes = [
   "PM"
 ]
 // (hours - (4 * (Math.ceil(hours / 6)))).toString() + ":" + (minutes).toString() + ":" + (seconds).toString()  + " " + getSixHourTime()
-function getSixHourTime(timestamp, mode) {
+function get6hourTime(timestamp, mode) {
   if (!mode || mode == 0) {
     if (!timestamp) {
       return (hours - (4 * (Math.ceil(hours / 6)))).toString() + ":" + (minutes).toString() + ":" + (seconds).toString() + "." + ms.toString() + " " + sixhourtimes[Math.ceil(hours / 6) - 1]
@@ -31,7 +31,7 @@ function getSixHourTime(timestamp, mode) {
     throw "ValueError: Invalid mode"
   }
 }
-function getTwelveHourTime(timestamp, mode) {
+function get12hourTime(timestamp, mode) {
     if (!mode || mode == 0) {
       if (!timestamp) {
         return hours > 12 ? (hours - 12).toString() + ":" + minutes.toString() + ":" + seconds.toString() + "." + ms.toString() + " " + twelvehourtimes[Math.ceil(hours / 12) - 1] : (hours).toString() + ":" + minutes.toString() + ":" + seconds.toString() + "." + ms.toString() + " " + twelvehourtimes[Math.ceil(hours / 12) - 1]
@@ -47,4 +47,11 @@ function getTwelveHourTime(timestamp, mode) {
     } else if (mode != 0 && mode != 1) {
       throw "ValueError: Invalid mode"
     }
+}
+function get24hourTime(timestamp) {
+  if (!timestamp) {
+    return (hours).toString() + ":" + (minutes).toString() + ":" + (seconds).toString() + "." + ms.toString()
+  } else {
+    return (new Date(timestamp).getHours()).toString() + ":" + (new Date(timestamp).getMinutes()).toString() + ":" + (new Date(timestamp).getSeconds()).toString() + "." + new Date(timestamp).getSeconds.toString()
+  }
 }
