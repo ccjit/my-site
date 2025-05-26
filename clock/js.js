@@ -65,3 +65,6 @@ function updateTime() {
   document.getElementById('24-hour-time').text = get24hourTime()
   document.getElementById('6-hour-time').text = get6hourTime()
 }
+let clockInterval = setInterval(()=>{
+  updateTime()
+},1)
