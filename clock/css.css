@@ -1,6 +1,7 @@
 body {
   background-color: #404040;
   text-align: center;
+  vertical-align: center;
 }
 h1 {
   font-family: "Monaco", "Courier New", monospace;
