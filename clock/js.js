@@ -67,4 +67,4 @@ function updateTime() {
 }
 let clockInterval = setInterval(()=>{
   updateTime()
-},1)
+},37)
