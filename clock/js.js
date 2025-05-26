@@ -1,4 +1,4 @@
-let date = new Date()
+let date = new Date(Date.now())
 let hours = date.getHours()
 let minutes = date.getMinutes()
 let seconds = date.getSeconds()
@@ -56,7 +56,7 @@ function get24hourTime(timestamp) {
   }
 }
 function updateTime() {
-  let date = new Date()
+  let date = new Date(Date.now())
   let hours = date.getHours()
   let minutes = date.getMinutes()
   let seconds = date.getSeconds()
