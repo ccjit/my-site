@@ -17,9 +17,9 @@ const twelvehourtimes = [
 function getSixHourTime(timestamp, mode) {
   if (!mode || mode == 0) {
     if (!timestamp) {
-      return (hours - (4 * (Math.ceil(hours / 6)))).toString() + ":" + (minutes).toString() + ":" + (seconds).toString()  + " " + sixhourtimes[Math.ceil(hours / 6) - 1]
+      return (hours - (4 * (Math.ceil(hours / 6)))).toString() + ":" + (minutes).toString() + ":" + (seconds).toString() + "." + ms.toString() + " " + sixhourtimes[Math.ceil(hours / 6) - 1]
     } else {
-      return (new Date(timestamp).getHours() - (4 * (Math.ceil(new Date(timestamp).getHours() / 6)))).toString() + ":" + (new Date(timestamp).getMinutes()).toString() + ":" + (new Date(timestamp).getSeconds()).toString()  + " " + sixhourtimes[Math.ceil(new Date(timestamp).getHours() / 6) - 1]
+      return (new Date(timestamp).getHours() - (4 * (Math.ceil(new Date(timestamp).getHours() / 6)))).toString() + ":" + (new Date(timestamp).getMinutes()).toString() + ":" + (new Date(timestamp).getSeconds()).toString() + "." + new Date(timestamp).getSeconds.toString() + " " + sixhourtimes[Math.ceil(new Date(timestamp).getHours() / 6) - 1]
     }
   } else if (mode == 1) {
     if (!timestamp) {
@@ -34,9 +34,9 @@ function getSixHourTime(timestamp, mode) {
 function getTwelveHourTime(timestamp, mode) {
     if (!mode || mode == 0) {
       if (!timestamp) {
-        return hours > 12 ? (hours - 12).toString() + ":" + minutes.toString() + ":" + seconds.toString() + " " + twelvehourtimes[Math.ceil(hours / 12) - 1] : (hours).toString() + ":" + minutes.toString() + ":" + seconds.toString() + " " + twelvehourtimes[Math.ceil(hours / 12) - 1]
+        return hours > 12 ? (hours - 12).toString() + ":" + minutes.toString() + ":" + seconds.toString() + "." + ms.toString() + " " + twelvehourtimes[Math.ceil(hours / 12) - 1] : (hours).toString() + ":" + minutes.toString() + ":" + seconds.toString() + "." + ms.toString() + " " + twelvehourtimes[Math.ceil(hours / 12) - 1]
       } else {
-        return hours > 12 ? (new Date().getHours() - 12).toString() + ":" + new Date().getMinutes().toString() + ":" + new Date().getSeconds().toString() + " " + twelvehourtimes[Math.ceil(new Date(timestamp).getHours() / 12) - 1] : (new Date().getHours()).toString() + ":" + new Date().getMinutes().toString() + ":" + new Date().getSeconds().toString() + " " + twelvehourtimes[Math.ceil(new Date(timestamp).getHours() / 12) - 1]
+        return hours > 12 ? (new Date().getHours() - 12).toString() + ":" + new Date().getMinutes().toString() + ":" + new Date().getSeconds().toString() + "." + new Date(timestamp).getSeconds.toString() + " " + twelvehourtimes[Math.ceil(new Date(timestamp).getHours() / 12) - 1] : (new Date().getHours()).toString() + ":" + new Date().getMinutes().toString() + ":" + new Date().getSeconds().toString() + "." + new Date(timestamp).getSeconds.toString() + " " + twelvehourtimes[Math.ceil(new Date(timestamp).getHours() / 12) - 1]
       }
     } else if (mode == 1) {
       if (!timestamp) {
