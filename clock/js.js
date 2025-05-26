@@ -55,3 +55,8 @@ function get24hourTime(timestamp) {
     return (new Date(timestamp).getHours()).toString() + ":" + (new Date(timestamp).getMinutes()).toString() + ":" + (new Date(timestamp).getSeconds()).toString() + "." + new Date(timestamp).getSeconds.toString()
   }
 }
+function updateTime() {
+  document.getElementById('time').text = get12hourTime()
+  document.getElementById('24-hour-time').text = get24hourTime()
+  document.getElementById('6-hour-time').text = get6hourTime()
+}
