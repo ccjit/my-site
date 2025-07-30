@@ -1,2 +1,54 @@
-import items from './items.json' with { type: 'json' };
+const items = {
+  "ores":{
+    "stone":{
+      "value":10,
+      "sellvalue":5
+    },
+    "copper":{
+      "value":70,
+      "sellvalue":30
+    },
+    "iron":{
+      "value":200,
+      "sellvalue":100
+    },
+    "diamond":{
+      "value":10000,
+      "sellvalue":9000
+    },
+    "emerald":{
+      "value":70000,
+      "sellvalue":60000
+    },
+    "netherite":{
+      "value":14000000,
+      "sellvalue":10000000
+    }
+  },
+  "pickaxes":{
+    "wood":{
+      "efficiency":10
+    },
+    "iron":{
+      "efficiency":6
+    },
+    "diamond":{
+      "efficiency":3
+    },
+    "netherite":{
+      "efficiency":1
+    }
+  },
+  "randoms":{
+    "stick":{
+      "sellvalue":2
+    },
+    "bone":{
+      "sellvalue":4
+    },
+    "dripstone":{
+      "sellvalue":10
+    }
+  }
+}
 console.log(items)
