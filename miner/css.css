@@ -1,0 +1,13 @@
+body {
+  background-color: #b3acf1;
+  text-align: center;
+}
+.p1 {
+  vertical-align: middle;
+  color: white;
+}
+#minebutton {
+  vertical-align: middle;
+  height: 256px;
+  width: 256px;
+}
